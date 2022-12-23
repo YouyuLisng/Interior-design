@@ -13,6 +13,13 @@ a {
     height: 24px;
 }
 
+.banner {
+    background-image: url(../image/d-01.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+
+}
 .dropdown-menu[data-bs-popper] {
     left: -12px !important;
 }
