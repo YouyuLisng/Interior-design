@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>日和設計｜室內設計</title>
+    <!-- YouTubeAPI -->
     <script async src="//www.youtube.com/iframe_api"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="https://www.hiyori.com.tw/favicon.ico">
@@ -77,19 +80,19 @@
         <div class="container-fluid p-0">
             <div class="position-relative banner">
                 <div class="text position-absolute">
-                    <div class="text-end text-white fs-4 fw-normal">
+                    <div class="text-end text-white fw-normal">
                         <p class="">天氣和煦的日子，生活儀式感的美好。</p>
                         <p class="">從設計讓人互動，寫下新片刻、心回憶。</p>
                     </div>
                 </div>
             </div>
         </div>
-        <section class="container py-5">
-            <div class="text-wrap text-center">
+        <section class="container">
+            <div class="text-wrap text-center py-lg-5 py-md-4 p-3">
                 <h2 class="section-title">精選案例</h2>
-                <p class="section-text">來自家人情感溫度的故事，成就每一個日和的經典案例</p>
+                <p class="section-text d-none d-lg-block d-md-block">來自家人情感溫度的故事，成就每一個日和的經典案例</p>
             </div>
-            <div class="row pt-5 gy-3">
+            <div class="row py-lg-5 py-md-3 gy-3">
                 <div class="col-lg-5 col-md-12">
                     <div class="item-box">
                         <figure>
@@ -182,24 +185,24 @@
                     </div>
                 </div>
             </div>
-            <div class="pt-5 position-relative">
+            <div class="py-5 position-relative">
                 <div class="position-absolute top-50 start-50 translate-middle p-2 border-bottom border-dark">
                     <a class="d-block text-dark" href="">更多設計案例</a>
                 </div>
             </div>
         </section>
-        <section class="py-5">
+        <section class="py-lg-5 py-md-3">
             <div id="YouTubeVideoPlayerAPI"></div>
         </section>
-        <section class="py-5">
+        <section class="py-lg-5">
             <div class="container">
                 <div class="row gx-lg-5">
                     <div class="col-12 col-lg-4 justify-content-between">
                         <div class="row gy-5">
                             <div class="col-12">
-                                <div class="text-center text-lg-start py-3">
+                                <div class="text-center text-lg-start py-lg-3 py-md-3 p-2">
                                     <h2 class="section-title">服務流程</h2>
-                                    <p class="section-text">將室內設計的服務流程系統化，提供專業有效率的服務體驗</p>
+                                    <p class="section-text d-none d-lg-block d-md-block">將室內設計的服務流程系統化，提供專業有效率的服務體驗</p>
                                 </div>
                             </div>
                             <div class="col-12 d-none d-lg-block">
@@ -208,7 +211,8 @@
                                 </div>
                             </div>
                             <div class="col-12 position-relative d-none d-lg-block">
-                                <div class="btn-wrap d-lg-inline-block border border-dark position-absolute top-100 start-50 translate-middle rounded">
+                                <div
+                                    class="btn-wrap d-lg-inline-block border border-dark position-absolute top-100 start-50 translate-middle rounded">
                                     <a class="text-dark d-block px-2 py-3" href="#">立即諮詢日和設計</a>
                                 </div>
                             </div>
@@ -251,48 +255,41 @@
                         </div>
                     </div>
                 </div>
-                <div class="qa-text text-center pt-5 d-lg-none mx-md-auto">
+                <div class="qa-text text-center py-5 d-lg-none mx-md-auto">
                     <p>您有對於日和設計的疑問嗎？ <br>如有任何問題歡迎填寫表單與我們聯繫，將會有專人為您服務喔！</p>
-                    <div class="position-relative p-md-3">
-                        <div class="btn-wrap d-lg-inline-block border border-dark position-absolute top-100 start-50 translate-middle rounded">
+                    <div class="position-relative p-md-3 p-3">
+                        <div
+                            class="btn-wrap d-lg-inline-block border border-dark position-absolute top-100 start-50 translate-middle rounded">
                             <a class="text-dark d-block p-3" href="#">立即諮詢日和設計</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="temp py-lg-3">
+            <div class="swiper mySwiper container p-lg-0">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="img-fluid rounded-3" src="./image/p01.jpeg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid rounded-3" src="./image/p02.jpeg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid rounded-3" src="./image/p03.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-button-next">
+                    <img src="./image/icon/arrow-right.png" alt="">
+                </div>
+                <div class="swiper-button-prev">
+                    <img src="./image/icon/2985162.png" alt="">
+                </div>
+            </div>
+        </section>
     </div>
-
-    <script>
-        const dataPanel = document.getElementById("data-panal");
-        function onYouTubeIframeAPIReady() {
-            var player;
-            player = new YT.Player('YouTubeVideoPlayerAPI', {
-                videoId: 'Xa2LF3QZz2c',   // YouTube 影片ID
-                width: '100%',            // 播放器寬度 (px)
-                height: '500px',           // 播放器高度 (px)
-                playerVars: {
-                    autoplay: 1,            // 自動播放影片
-                    controls: 0,            // 顯示播放器
-                    showinfo: 1,            // 隱藏影片標題
-                    modestbranding: 1,      // 隱藏YouTube Logo
-                    loop: 1,                // 重覆播放
-                    playlist: 'Xa2LF3QZz2c', // 當使用影片要重覆播放時，需再輸入YouTube 影片ID
-                    fs: 0,                  // 隱藏全螢幕按鈕
-                    cc_load_policty: 0,     // 隱藏字幕
-                    iv_load_policy: 3,      // 隱藏影片註解
-                    autohide: 0             // 影片播放時，隱藏影片控制列
-                },
-                events: {
-                    onReady: function (e) {
-                        e.target.mute();      //播放時靜音
-                        e.target.playVideo(); //強制播放(手機才會自動播放，但僅限於Android)
-                    }
-                }
-            });
-        }
-    </script>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script src="js/all.js"></script>
 
 </html>
